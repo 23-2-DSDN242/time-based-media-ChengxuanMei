@@ -115,7 +115,12 @@ function draw_clock(obj) {
 
   ///////////////////second option for alarm set?
   //clouds
-  fill(255,255,204)
+  if (obj.hours >= 7 && obj.hours<18){
+    fill(255,255,204)
+  }else{
+    fill(204,204,255)
+  }
+
   ellipse(100,90, 5,5)
   rect(50, 100, 55, 5, 20)
   rect( 30, 115,55, 5, 20)
@@ -205,8 +210,8 @@ function draw_clock(obj) {
 
 //clock
 if (obj.hours >= 7 && obj.hours<18){
-  fill(255,240,208)
-  stroke(255,240,208)
+  fill(204,153,255)
+  stroke(204,153,255)
 }else{
   fill(255)
   stroke(255) //change clock color on light and night mode 
