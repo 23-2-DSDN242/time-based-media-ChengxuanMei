@@ -112,6 +112,39 @@ function draw_clock(obj) {
   rect(840,220, 5,100)
   rect(900,220, 5,100)
 
+
+  ///////////////////second option for alarm set?
+  //clouds
+  fill(255,255,204)
+  ellipse(100,90, 5,5)
+  rect(50, 100, 55, 5, 20)
+  rect( 30, 115,55, 5, 20)
+  rect( 70, 110,55, 5, 20)
+  rect( 110, 120,55, 5, 20)
+  rect( 9, 120,55, 5, 20)
+  rect( 70, 130,70, 5, 20)
+  rect( 55, 120,60, 5, 20)
+  rect( 70, 110,60, 5, 20)
+  rect( 90, 140, 40, 5, 20)
+  rect( 90, 125,70, 5, 20)
+  rect( 140, 110,55, 5, 20)
+  rect( 140, 130,70, 5, 20)
+  rect( 140, 110,60, 5, 20)
+  rect( 160, 140, 40, 5, 20)
+  rect( 160, 125,70, 5, 20)
+
+  ellipse(780,70, 5,5)
+  rect(750, 80, 55, 5, 20)
+  rect( 760, 115,20, 5, 20)
+  rect( 810, 95,55, 5, 20)
+  rect( 755, 95,60, 5, 20)
+  rect( 755, 90,55, 5, 20)
+  rect( 740, 80,70, 5, 20)
+  rect( 720, 90,90, 5, 20)
+  rect( 740, 100, 40, 5, 20)
+  rect( 760, 105,70, 5, 20)
+  rect( 755, 115,55, 5, 20)
+
   //city third layer 
   if (obj.hours >= 7 && obj.hours<18){
     fill(87,76,183)
@@ -170,11 +203,10 @@ function draw_clock(obj) {
   rect(820, 330,60, 200)
   rect(930, 300,80, 200)//12
 
-  
 //clock
 if (obj.hours >= 7 && obj.hours<18){
-  fill(38,69,121)
-  stroke(38,69,121)
+  fill(255,240,208)
+  stroke(255,240,208)
 }else{
   fill(255)
   stroke(255) //change clock color on light and night mode 
@@ -188,7 +220,7 @@ if( obj.seconds_until_alarm > 0){ //
 strokeWeight(10)
 textSize(200)
 textAlign(CENTER,CENTER)
-text(obj.hours, 250, 200)
+text(obj.hours, 210, 200)
 //minutes
 textAlign(CENTER,CENTER)
 text(obj.minutes, width/2, 200)
@@ -242,17 +274,6 @@ rect(870,370,1,10)
 rect(870,400,1,10)
 rect(870,430,1,10)
 
-///////////////////second option for alarm set?
-  //clouds
-  //ellipse(100,90, 5,5)
-  //rect(50, 100, 55, 2, 20)
-  //rect( 30, 115,55, 2, 20)
-  //rect( 70, 110,55, 2, 20)
-  //rect( 110, 120,55, 2, 20)
-  //rect( 9, 120,55, 2, 20)
-  //rect( 70, 130,70, 2, 20)
-  //rect( 90, 140, 40, 2, 20)
-  //rect( 90, 125,70, 2, 20)
   
 }
 else{
