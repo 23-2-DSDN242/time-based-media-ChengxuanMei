@@ -181,24 +181,100 @@ if (obj.hours >= 7 && obj.hours<18){
   stroke(255)
 }
 
+//////////////////////////////////////////
+//alarm set 
+if( obj.seconds_until_alarm > 0){
 //noStroke(98,77,84)
 //hours
-  strokeWeight(5)
-  textSize(100)
-  textAlign(CENTER,CENTER)
-  text(obj.hours, 250, 200)
-
+strokeWeight(10)
+textSize(200)
+textAlign(CENTER,CENTER)
+text(obj.hours, 250, 200)
 //minutes
-  strokeWeight(5)
-  textSize(100)
-  textAlign(CENTER,CENTER)
-  text(obj.minutes, width/2, 200)
+textAlign(CENTER,CENTER)
+text(obj.minutes, width/2, 200)
 //seconds
+textAlign(CENTER,CENTER)
+text(obj.seconds, 750, 200)
+
+//WINDOW 1
 strokeWeight(5)
-  textSize(100)
-  textAlign(CENTER,CENTER)
-  text(obj.seconds, 750, 200)
+rect(10,190,5,5)
+rect(10,230,5,5)
+rect(10,270,5,5)
+rect(10,310,5,5)
+rect(10,350,5,5)
+rect(10,390,5,5)
+//WINDOW 2
+rect(30,190,5,5)
+rect(30,230,5,5)
+rect(30,270,5,5)
+rect(30,310,5,5)
+rect(30,350,5,5)
+rect(30,390,5,5)
 
-  }
+//WINDOW 3
+rect(230,370,15,5)
+rect(230,400,15,5)
+rect(230,430,15,5)
+
+//WINDOW #3
+rect(380,360,18,15)
+rect(380,395,18,15)
+
+
+
+//WINDOW 4
+rect(620,330,5,100)
+rect(650,330,5,50)
+rect(680,330,5,100)
+rect(710,330,5,50)
+
+//WINDOW 5
+rect(830,370,1,10)
+rect(830,400,1,10)
+rect(830,430,1,10)
+//WINDOW 6
+rect(850,370,1,10)
+rect(850,400,1,10)
+rect(850,430,1,10)
+//WINDOW 7
+rect(870,370,1,10)
+rect(870,400,1,10)
+rect(870,430,1,10)
+
   
+  //clouds
+  //ellipse(100,90, 5,5)
+  //rect(50, 100, 55, 2, 20)
+  //rect( 30, 115,55, 2, 20)
+  //rect( 70, 110,55, 2, 20)
+  //rect( 110, 120,55, 2, 20)
+  //rect( 9, 120,55, 2, 20)
+  //rect( 70, 130,70, 2, 20)
+  //rect( 90, 140, 40, 2, 20)
+  //rect( 90, 125,70, 2, 20)
+  
+}
+else{
+  strokeWeight(5)
+textSize(100)
+textAlign(CENTER,CENTER)
+text(obj.hours, 250, 200)
+//minutes
+textAlign(CENTER,CENTER)
+text(obj.minutes, width/2, 200)
+//seconds
+textAlign(CENTER,CENTER)
+text(obj.seconds, 750, 200)
 
+}
+
+fill(255)
+
+
+
+
+
+
+}
