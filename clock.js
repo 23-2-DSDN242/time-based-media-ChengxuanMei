@@ -20,6 +20,7 @@ function draw_clock(obj) {
   //background setup
   //let myStrokeWeight = 80
   //strokeWeight(myStrokeWeight)
+
   let pink = color(255,153,204)
   let deepblue = color(0,0,102)
   let rose = color(204,0,102)
@@ -30,7 +31,7 @@ function draw_clock(obj) {
     background(0,0,100)
   }
   
-  
+  // lerp color background option 
   //for(let i = 0; i< width; i=i + myStrokeWeight){
     //let lerpMap = map(i, 0,width, 0,1)
     //let gradientColor = lerpColor(purple,pink, lerpMap)
@@ -46,7 +47,6 @@ function draw_clock(obj) {
   let grassgreen= color(102,204,0,OpacityAm )
   let orange = color(255,204,153,OpacityAm )
 
-
   let minForlerp = map(obj.seconds,0,59, 0,1)
   let lightcolor = lerpColor(yellow, orange,minForlerp)
   let nightcolor = lerpColor(grassgreen, deepyellow,minForlerp)
@@ -54,17 +54,16 @@ function draw_clock(obj) {
   let sizeStep = 15
   let howManyCircles = obj.seconds;
   if (obj.hours >= 7 && obj.hours<18){
-    fill(lightcolor)
+    fill(lightcolor)  // light color palette 7am-6pm
   }else{
-    fill(nightcolor )
+    fill(nightcolor ) //night color palette 6pm-6am
   }
  
   for(let i = 0; i< howManyCircles; i++){
     ellipse(width/2,300, sizeStep*i); //location of the sun
   }
 
-
-
+//background building 
 
   //city first layer
   if (obj.hours >= 7 && obj.hours<18){
@@ -178,12 +177,12 @@ if (obj.hours >= 7 && obj.hours<18){
   stroke(38,69,121)
 }else{
   fill(255)
-  stroke(255)
+  stroke(255) //change clock color on light and night mode 
 }
 
 //////////////////////////////////////////
 //alarm set 
-if( obj.seconds_until_alarm > 0){
+if( obj.seconds_until_alarm > 0){ //
 //noStroke(98,77,84)
 //hours
 strokeWeight(10)
@@ -195,9 +194,9 @@ textAlign(CENTER,CENTER)
 text(obj.minutes, width/2, 200)
 //seconds
 textAlign(CENTER,CENTER)
-text(obj.seconds, 750, 200)
+text(obj.seconds, 750, 200)   // text larger 
 
-//WINDOW 1
+//WINDOW 1          //building windows appear 
 strokeWeight(5)
 rect(10,190,5,5)
 rect(10,230,5,5)
@@ -243,7 +242,7 @@ rect(870,370,1,10)
 rect(870,400,1,10)
 rect(870,430,1,10)
 
-  
+///////////////////second option for alarm set?
   //clouds
   //ellipse(100,90, 5,5)
   //rect(50, 100, 55, 2, 20)
@@ -267,14 +266,6 @@ text(obj.minutes, width/2, 200)
 //seconds
 textAlign(CENTER,CENTER)
 text(obj.seconds, 750, 200)
-
 }
-
-fill(255)
-
-
-
-
-
 
 }
