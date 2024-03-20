@@ -44,9 +44,11 @@ function draw_clock(obj) {
   let deepyellow = color(255,255,102,OpacityAm)
   let yellow = color(255,255,204,OpacityAm )
   let grassgreen= color(102,204,0,OpacityAm )
+  let orange = color(255,204,153,OpacityAm )
 
-  let minForlerp = map(obj.minutes,0,59, 0,1)
-  let lightcolor = lerpColor(yellow, deepyellow,minForlerp)
+
+  let minForlerp = map(obj.seconds,0,59, 0,1)
+  let lightcolor = lerpColor(yellow, orange,minForlerp)
   let nightcolor = lerpColor(grassgreen, deepyellow,minForlerp)
 
   let sizeStep = 15
@@ -196,8 +198,6 @@ strokeWeight(5)
   textSize(100)
   textAlign(CENTER,CENTER)
   text(obj.seconds, 750, 200)
-
-
 
   }
   
